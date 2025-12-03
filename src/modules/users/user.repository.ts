@@ -1,6 +1,6 @@
-import { db } from '@shared/database/connection.js';
-import { User, CreateUserDTO, UpdateUserDTO } from './user.schema.js';
-import { PaginationParams, ServiceResponse } from '@shared/types/index.js';
+import { db } from '@shared/database/connection';
+import { User, CreateUserDTO, UpdateUserDTO } from './user.schema';
+import { PaginationParams, ServiceResponse } from '@shared/types/index';
 import { StatusCodes } from 'http-status-codes';
 
 export class UserRepository {

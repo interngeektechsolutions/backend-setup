@@ -1,5 +1,5 @@
 import { Pool, PoolClient, QueryResult, QueryResultRow } from 'pg';
-import { databaseConfig } from '@config/database.js';
+import { databaseConfig } from '@config/database';
 
 class Database {
   private pool: Pool;
