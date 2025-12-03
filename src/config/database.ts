@@ -1,4 +1,4 @@
-import { env } from './env';
+import { env } from './env.js';
 
 export const databaseConfig = {
   host: env.DB_HOST,

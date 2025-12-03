@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { ServiceError } from '@shared/types';
+import { ServiceError } from '@shared/types/index.js';
 import { StatusCodes } from 'http-status-codes';
-import { env } from '@config/env';
+import { env } from '@config/env.js';
 
 export const errorHandler = (err: Error, req: Request, res: Response, next: NextFunction) => {
   // Handle ServiceError

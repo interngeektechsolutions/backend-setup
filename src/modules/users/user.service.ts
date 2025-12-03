@@ -1,6 +1,6 @@
-import { UserRepository } from './user.repository';
-import { User, CreateUserDTO, UpdateUserDTO } from './user.schema';
-import { ServiceResponse } from '@shared/types';
+import { UserRepository } from './user.repository.js';
+import { User, CreateUserDTO, UpdateUserDTO } from './user.schema.js';
+import { ServiceResponse } from '@shared/types/index.js';
 
 export class UserService {
   constructor(private userRepository: UserRepository) {}

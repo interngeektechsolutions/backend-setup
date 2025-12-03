@@ -1,5 +1,5 @@
-import { Pool, PoolClient, QueryResult } from 'pg';
-import { databaseConfig } from '@config/database';
+import { Pool, PoolClient, QueryResult, QueryResultRow } from 'pg';
+import { databaseConfig } from '@config/database.js';
 
 class Database {
   private pool: Pool;
@@ -24,7 +24,10 @@ class Database {
     return Database.instance;
   }
 
-  async query<T = any>(text: string, params?: any[]): Promise<QueryResult<T>> {
+  async query<T extends QueryResultRow = any>(
+    text: string,
+    params?: any[]
+  ): Promise<QueryResult<T>> {
     const start = Date.now();
     try {
       const result = await this.pool.query<T>(text, params);

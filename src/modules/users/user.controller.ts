@@ -1,9 +1,14 @@
 import { Router, Request, Response } from 'express';
 import { UserService } from './user.service';
-import { UserRepository } from './user.repository';
-import { validate } from '@shared/middleware/validation.middleware';
-import { createUserSchema, updateUserSchema, getUserSchema, listUsersSchema } from './user.schema';
-import { Controller, AsyncHandler } from '@shared/types';
+import { UserRepository } from './user.repository.js';
+import { validate } from '@shared/middleware/validation.middleware.js';
+import {
+  createUserSchema,
+  updateUserSchema,
+  getUserSchema,
+  listUsersSchema,
+} from './user.schema.js';
+import { Controller, AsyncHandler } from '@shared/types/index.js';
 
 export class UserController implements Controller {
   public path = '/users';
