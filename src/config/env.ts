@@ -27,8 +27,8 @@ const parseEnv = (): Env => {
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.error('❌ Invalid environment variables:');
-      error.errors.forEach((err) => {
-        console.error(`  ${err.path.join('.')}: ${err.message}`);
+      error.issues.forEach((issue) => {
+        console.error(`  ${issue.path.join('.')}: ${issue.message}`);
       });
     }
     process.exit(1);
