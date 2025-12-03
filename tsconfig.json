@@ -7,14 +7,14 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "moduleResolution": "node",
-    "module": "commonjs",
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
     "target": "es2022",
-    "types": [],
+    "types": ["node"],
      "outDir": "./dist",
     "rootDir": "./src",
     // For nodejs:
-    // "lib": ["esnext"],
+    "lib": ["es2022"],
     // "types": ["node"],
     // and npm install -D @types/node
 
